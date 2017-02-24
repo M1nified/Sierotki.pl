@@ -37,29 +37,7 @@
     }
   }
   let orphansFix = function(input){
-    if(!input) input = '';
-    let tags = [], brackets = /<[^>]*>/ig;
-    for( let tag; tag = brackets.exec(input); tags.push(tag));
-    console.log(tags);
-    let index = 0;
-    let output = "";
-    tags.forEach(tag=>{
-      console.log(tag);
-      output += orphansFixSimple(input.slice(index,tag.index)) + tag[0];
-      index = tag.index + tag[0].length;
-    })
-    output += orphansFixSimple(input.slice(index,input.length));
-    return output;
-  }
-  let orphansFixSimple = function(input){
-    let output = input.replace(/\w\w? /g, function(match){
-      return match[0].toUpperCase() === match[0] ? match.slice(0, match.length - 1) + '&nbsp;' : match;
-    }).replace(/( |(&nbsp;))\w\w? /g, function(match){
-      return match.slice(0, match.length - 1) + '&nbsp;';
-    }).replace(/( |(&nbsp;))\w\w? /g, function(match){
-      return match.slice(0, match.length - 1) + '&nbsp;';
-    });
-    return output;
+    return Sierotki.orphansFix(input);
   }
   let input_previous = "";
   let interval_1 = setTimeout.bind(null,function(){
