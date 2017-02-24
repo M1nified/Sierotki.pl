@@ -1,0 +1,11 @@
+CACHE MANIFEST
+# V UP4
+CACHE:
+
+FALLBACK:
+# / /404.html
+
+NETWORK:
+sierotki.manifest.json
+sierotki.background.js
+*

@@ -1,0 +1,28 @@
+{
+    "name": "Sierotki",
+    "short_name":"Sierotki",
+    "start_url":"http://localhost:8085",
+    "display":"standalone",
+    "manifest_version": 2,
+    "version":"0.1",
+    "offline_enabled": true,
+    "permissions":[
+      "clipboardRead",
+      "clipboardWrite",
+      "background"
+    ],
+    "app": {
+      "browse_urls": [ "http://localhost:8085/", "https://example.com/" ],
+      "launch": {
+        "container": "tab",
+        "web_url": "http://localhost:8085/"
+      },
+      "urls": [ "*://localhost:8085/", "*://sierotki.pl/" ]
+    },
+    "icons": [
+      {
+        "src": "images/icon/icon_144.png",
+        "sizes": "144x144"
+      }
+    ]
+}
