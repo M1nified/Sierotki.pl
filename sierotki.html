@@ -8,7 +8,8 @@
 
 <body>
   <div class="settings">
-    <p><label><input type="checkbox" id="select-after-paste"><span>Auto select after paste</span></label></p>
+    <p><label><input type="checkbox" id="select-after-paste"><span>Auto select after paste</span></label> 
+    <label><input type="checkbox" id="focus-after-focus"><span>Auto focus after focus</span></label></p>
     <!--<p><label><input type="checkbox" id="copy-on-paste"> Auto copy after paste</label></p>-->
     <!--<p><label><input type="checkbox" id="auto-copy"> Auto-copy</label></p>-->
   </div>
@@ -19,24 +20,32 @@
   <script type="text/javascript" src="node_modules/sierotki.js/Sierotki.js"></script>
   <script type="text/javascript" src="sierotki.main.js"></script>
   <style>
-    label>input[type="checkbox"]+span{
-      
+    label>input[type="checkbox"] {
+      display: none;
     }
-    @keyframes bg_color {
-      0% {
-        background-color: #c3c3c3;
-      }
-      50% {
-        background-color: #999999;
-      }
-      100% {
-        background-color: #c3c3c3;
-      }
+    
+    label>input[type="checkbox"]+span {
+      /*border: solid 2px #000;*/
+      cursor: pointer;
+      padding: 0.5em;
+      background-color: dimgrey;
+      color: #f0f0f0;
     }
-    body{
-      animation-name: bg_color;
-      animation-duration: 5s;
-      animation-iteration-count: infinite;
+    label>input[type="checkbox"]+span::after {
+      content: " (off)";
+    }
+    
+    label>input[type="checkbox"]:checked+span {
+      background-color: limegreen;
+      color: #383838;
+    }
+
+    label>input[type="checkbox"]:checked+span::after {
+      content: "  (on)";
+    }
+    
+    body {
+      background-color: #f0f0f0;
     }
     
     * {
@@ -48,12 +57,11 @@
       height: 300px;
       border: solid 1px #a9a9a9;
       resize: both;
-      padding: 2px;
+      padding: 0.5em;
       display: block;
       box-sizing: border-box;
       font-family: monospace;
       overflow: auto;
-      /*margin: 1em 0em;*/
     }
   </style>
 </body>
