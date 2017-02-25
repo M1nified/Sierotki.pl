@@ -58,8 +58,28 @@
     }
     interval_1();
   }, 100);
+  let settingsLoad = function(){
+    if(typeof Storage === 'undefined') return false;
+    document.querySelectorAll(".settings input").forEach(function(element) {
+      if(element.type === 'checkbox'){
+        element.checked = localStorage.getItem(element.id) === 'true' ? true : false;
+      }
+    }, this);
+  }
+  let settingsAutoSave = function(){
+    if(typeof Storage === 'undefined') return false;
+    document.querySelectorAll(".settings input").forEach(function(element){
+      if(element.type === 'checkbox'){
+        element.addEventListener('change',function(event){
+          localStorage.setItem(element.id, element.checked);
+        });
+      }
+    })
+  }
   window.addEventListener('load', function () {
     interval_1();
+    settingsAutoSave();
+    settingsLoad();
     // document.designMode="On";
     // if (navigator.serviceWorker) {
     //   navigator.serviceWorker.register('/sierotki.background.js').then(function (registration) {
