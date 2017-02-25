@@ -1,11 +1,14 @@
 CACHE MANIFEST
-# V UP5
+# V UP 12
 CACHE:
+sierotki.html
+sierotki.manifest.json
+sierotki.main.js
+sierotki.main.css
+images/icon/icon_144.png
 
 FALLBACK:
 # / /404.html
 
 NETWORK:
-sierotki.manifest.json
-sierotki.background.js
 *

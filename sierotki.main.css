@@ -1,0 +1,53 @@
+label>input[type="checkbox"] {
+  display: none;
+}
+
+label>input[type="checkbox"]+span {
+  /*border: solid 2px #000;*/
+  cursor: pointer;
+  padding: 0.5em;
+  background-color: #b1b1b1;
+  color: #f0f0f0;
+}
+
+label>input[type="checkbox"]+span::after {
+  content: "\00a0(off)";
+}
+
+label>input[type="checkbox"]:checked+span {
+  background-color: #6d6d6d;
+  /*color: #383838;*/
+}
+
+label>input[type="checkbox"]:checked+span::after {
+  content: "\00a0\00a0(on)";
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: monospace;
+}
+
+* {
+  border-radius: 3px;
+}
+
+.inout textarea {
+  width: 100%;
+  height: 300px;
+  border: solid 1px #a9a9a9;
+  resize: vertical;
+  padding: 0.5em;
+  display: block;
+  box-sizing: border-box;
+  font-family: monospace;
+  overflow: auto;
+}
+
+footer {
+  text-align: center;
+}
+
+footer a {
+  color: initial;
+}

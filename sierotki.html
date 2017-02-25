@@ -7,63 +7,29 @@
 </head>
 
 <body>
+  <h1>Sierotki.js</h1>
   <div class="settings">
-    <p><label><input type="checkbox" id="select-after-paste"><span>Auto select after paste</span></label> 
-    <label><input type="checkbox" id="focus-after-focus"><span>Auto focus after focus</span></label></p>
+    <p>
+      <label><input type="checkbox" id="select-after-paste"><span>Select after paste</span></label>
+      <label><input type="checkbox" id="focus-after-focus"><span>Focus after focus</span></label>
+    </p>
     <!--<p><label><input type="checkbox" id="copy-on-paste"> Auto copy after paste</label></p>-->
     <!--<p><label><input type="checkbox" id="auto-copy"> Auto-copy</label></p>-->
   </div>
   <div class="inout">
-    <p><textarea name="" id="input" class=""></textarea></p>
-    <p><textarea name="" id="output" class="" readonly></textarea></p>
+    <p><textarea name="" id="input" class="" placeholder="HTML input..."></textarea></p>
+    <p><textarea name="" id="output" class="" placeholder="HTML output..." readonly></textarea></p>
   </div>
+  <footer>
+    <hr>
+    <p>Implements <a href="https://www.npmjs.com/package/sierotki.js">sierotki.js</a> npm package.</p>
+  </footer>
   <script type="text/javascript" src="node_modules/sierotki.js/Sierotki.js"></script>
   <script type="text/javascript" src="sierotki.main.js"></script>
-  <style>
-    label>input[type="checkbox"] {
-      display: none;
-    }
-    
-    label>input[type="checkbox"]+span {
-      /*border: solid 2px #000;*/
-      cursor: pointer;
-      padding: 0.5em;
-      background-color: dimgrey;
-      color: #f0f0f0;
-    }
-    label>input[type="checkbox"]+span::after {
-      content: " (off)";
-    }
-    
-    label>input[type="checkbox"]:checked+span {
-      background-color: #7ee47e;
-      color: #383838;
-    }
-
-    label>input[type="checkbox"]:checked+span::after {
-      content: "  (on)";
-    }
-    
-    body {
-      background-color: #f0f0f0;
-    }
-    
-    * {
-      border-radius: 3px;
-    }
-    
-    .inout textarea {
-      width: 100%;
-      height: 300px;
-      border: solid 1px #a9a9a9;
-      resize: both;
-      padding: 0.5em;
-      display: block;
-      box-sizing: border-box;
-      font-family: monospace;
-      overflow: auto;
-    }
-  </style>
+  <link rel="stylesheet" href="sierotki.main.css">
+  <a href="https://github.com/M1nified/Sierotki.pl">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67"
+      alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
 </body>
 
 </html>

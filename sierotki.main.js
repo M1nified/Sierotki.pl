@@ -61,13 +61,13 @@
   window.addEventListener('load', function () {
     interval_1();
     // document.designMode="On";
-    if (navigator.serviceWorker) {
-      navigator.serviceWorker.register('/sierotki.background.js').then(function (registration) {
-        console.log('ServiceWorker registration successful with scope:', registration.scope);
-      }).catch(function (error) {
-        console.log('ServiceWorker registration failed:', error);
-      });
-    }
+    // if (navigator.serviceWorker) {
+    //   navigator.serviceWorker.register('/sierotki.background.js').then(function (registration) {
+    //     console.log('ServiceWorker registration successful with scope:', registration.scope);
+    //   }).catch(function (error) {
+    //     console.log('ServiceWorker registration failed:', error);
+    //   });
+    // }
     document.querySelector('#input').addEventListener('paste', function () {
       console.log('paste');
       pasted = true;
