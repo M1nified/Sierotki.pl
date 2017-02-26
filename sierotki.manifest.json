@@ -1,7 +1,7 @@
 {
   "name": "Sierotki.js",
   "short_name": "Sierotki.js",
-  "start_url": "http://sierotki.pl",
+  "start_url": "https://sierotki.pl",
   "display": "standalone",
   "theme_color": "#f0f0f0",
   "manifest_version": 2,
@@ -14,11 +14,11 @@
   ],
   "app": {
     "browse_urls": [
-      "http://sierotki.pl/"
+      "https://sierotki.pl/"
     ],
     "launch": {
       "container": "tab",
-      "web_url": "http://sierotki.pl/"
+      "web_url": "https://sierotki.pl/"
     },
     "urls": [
       "*://sierotki.pl/"
