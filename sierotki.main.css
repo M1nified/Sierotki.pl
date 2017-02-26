@@ -13,28 +13,30 @@ body {
   margin-right: auto;
 }
 
-label>input[type="checkbox"] {
+input[type="checkbox"] {
   display: none;
 }
 
-label>input[type="checkbox"]+span {
+input[type="checkbox"]+label {
   /*border: solid 2px #000;*/
   cursor: pointer;
   padding: 0.5em;
   background-color: #b1b1b1;
   color: #f0f0f0;
+  margin: 0.25em 0em;
+  display: inline-block;
 }
 
-label>input[type="checkbox"]+span::after {
+input[type="checkbox"]+label::after {
   content: "\00a0(off)";
 }
 
-label>input[type="checkbox"]:checked+span {
+input[type="checkbox"]:checked+label {
   background-color: #6d6d6d;
   /*color: #383838;*/
 }
 
-label>input[type="checkbox"]:checked+span::after {
+input[type="checkbox"]:checked+label::after {
   content: "\00a0\00a0(on)";
 }
 
@@ -56,4 +58,13 @@ footer {
 
 footer a {
   color: initial;
+}
+
+.only-wide{
+  display: none;
+}
+@media only screen and (min-device-width: 800px){
+  .only-wide{
+    display: initial;
+  }
 }

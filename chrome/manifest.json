@@ -24,17 +24,8 @@
       "https://sierotki.pl/"
     ]
   },
-  "icons": [
-    {
-      "src": "images/icon/icon_144.png",
-      "sizes": "144x144"
-    },
-    {
-      "src": "images/icon/icon_128.png",
-      "sizes": "128x128"
-    }
-  ],
-  "icons":{
-    "128": "images/icon/icon_128.png"
+  "icons": {
+    "128": "images/icon/icon_128.png",
+    "144": "images/icon/icon_144.png"
   }
 }
