@@ -1,4 +1,4 @@
 <?php
 
 ?>
-<?php include 'sierotki.html'; ?>
+<?php include 'sierotki.php'; ?>

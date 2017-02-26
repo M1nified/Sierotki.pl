@@ -1,11 +1,11 @@
 CACHE MANIFEST
-# V UP 18
+# V UP 23
 CACHE:
-sierotki.html
 sierotki.manifest.json
 sierotki.main.js
-sierotki.main.css
+# sierotki.main.css
 images/icon/icon_144.png
+lib/fork_me_on_github.png
 
 FALLBACK:
 # / /404.html
