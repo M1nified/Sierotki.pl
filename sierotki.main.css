@@ -63,7 +63,7 @@ footer a {
 .only-wide{
   display: none;
 }
-@media only screen and (min-device-width: 800px){
+@media only screen and (min-device-width: 500px) and (min-width: 500px){
   .only-wide{
     display: initial;
   }
