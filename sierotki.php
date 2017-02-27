@@ -9,7 +9,7 @@
 
 <body>
   <div class="content">
-    <h1>Sierotki.js</h1>
+    <h1>Sierotki.pl</h1>
     <div class="settings">
       <p>
         <input type="checkbox" id="select-after-paste"><label for="select-after-paste"><span>Select after paste</span></label>
@@ -24,7 +24,7 @@
     </div>
     <footer>
       <hr>
-      <p>Implements <a href="https://www.npmjs.com/package/sierotki.js">sierotki.js</a> npm package.</p>
+      <p>Implements <a href="https://www.npmjs.com/package/sierotki">sierotki</a> npm package.</p>
     </footer>
     <a href="https://github.com/M1nified/Sierotki.pl" class="only-wide">
       <img style="position: absolute; top: 0; right: 0; border: 0;" src="lib/fork_me_on_github.png"

@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/M1nified/Sierotki.pl#readme",
   "dependencies": {
-    "sierotki": "^1.0.1",
-    "sierotki.js": "^1.0.1"
+    "sierotki": "^1.0.1"
   }
 }
