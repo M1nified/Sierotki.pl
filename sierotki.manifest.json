@@ -33,8 +33,5 @@
       "src": "images/icon/icon_128.png",
       "sizes": "128x128"
     }
-  ],
-  "icons":{
-    "128": "images/icon/icon_128.png"
-  }
+  ]
 }
