@@ -9,13 +9,6 @@
   let setInput = function (input) {
     document.querySelector('#input').value = input;
   }
-  let pasteInput = function () {
-    // document.querySelector('#input').value = '';
-    // let range = document.createRange();
-    // document.querySelector('#input').focus();
-    // navigator.serviceWorker.controller.postMessage({execCommand:'paste'});
-    // console.log(document.execCommand('paste', false, null));
-  }
   let selectInput = function () {
     console.log('select')
     document.querySelector('#input').select();
@@ -53,34 +46,13 @@
     if (input != input_previous) {
       setOutput(orphansFix(input));
       input_previous = input;
-      // pasted && ( (pasted=false) || copyOutputSafe() );
       pasted && ((pasted = false) || selectOutputSafe());
     }
     interval_1();
   }, 100);
-  let settingsLoad = function(){
-    if(typeof Storage === 'undefined') return false;
-    document.querySelectorAll(".settings input").forEach(function(element) {
-      if(element.type === 'checkbox'){
-        element.checked = localStorage.getItem(element.id) === 'true' ? true : false;
-      }
-    }, this);
-  }
-  let settingsAutoSave = function(){
-    if(typeof Storage === 'undefined') return false;
-    document.querySelectorAll(".settings input").forEach(function(element){
-      if(element.type === 'checkbox'){
-        element.addEventListener('change',function(event){
-          localStorage.setItem(element.id, element.checked);
-        });
-      }
-    })
-  }
   window.addEventListener('load', function () {
     interval_1();
-    settingsAutoSave();
-    settingsLoad();
-    // document.designMode="On";
+    var autosave = new InputAutosave(document.querySelectorAll(".settings input"));
     if (navigator.serviceWorker) {
       navigator.serviceWorker.register('/sierotki.background.js').then(function (registration) {
         console.log('ServiceWorker registration successful with scope:', registration.scope);
@@ -95,10 +67,6 @@
     document.querySelector('#output').addEventListener('dblclick', function () {
       copyOutput();
     })
-    // document.querySelector('#input').addEventListener('click',function(){
-    //   console.log('click');
-    //   pasteInput();
-    // })
     window.addEventListener('focus', function (event) {
       event.preventDefault();
       if (document.querySelector('#focus-after-focus').checked) selectInput();
