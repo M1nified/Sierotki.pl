@@ -26,7 +26,7 @@
       <hr>
       <p>Implements <a href="https://www.npmjs.com/package/sierotki">sierotki</a> npm package.</p>
     </footer>
-    <a href="https://github.com/M1nified/Sierotki.pl" class="only-wide">
+    <a href="https://github.com/M1nified/npm-sierotki" class="only-wide">
       <img style="position: absolute; top: 0; right: 0; border: 0;" src="lib/fork_me_on_github.png"
         alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
   </div>
